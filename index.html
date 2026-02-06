@@ -1,0 +1,2614 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+    }(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '2558147041205045');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+  </script>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- UTMIFY SCRIPT -->
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    async
+    defer
+  ></script>
+  <!-- END UTMIFY -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Takealot JBL </title>
+
+  <style>
+    /* ===== FIX SCROLL HORIZONTAL FANTASMA ===== */
+body{
+  overflow-x: hidden;
+}
+
+.hero{
+  overflow-x: hidden;
+}
+
+.dots,
+.modal-dots{
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero__img,
+#modalImg{
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+    :root{
+      --topbar-height: 56px;
+      --border: #e8e8e8;
+      --text: #111;
+      --muted: #7a7a7a;
+      --bg: #ffffff;
+
+      --blue: #0b6ecb;
+      --green: #178a3b;         /* add to cart */
+      --danger: #ff5a5f;        /* contorno do botão esquerdo */
+    }
+
+    *{ box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #fff;
+      color: var(--text);
+    }
+
+    /* ===== TOP BAR (ETAPA 1) ===== */
+    .topbar{
+      height: var(--topbar-height);
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .topbar__left,
+    .topbar__right{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 72px; /* mantém o centro centrado */
+    }
+
+    .topbar__center{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      transform: translateY(-1px);
+    }
+
+    .icon-btn{
+      width: 28px;
+      height: 28px;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 999px;
+    }
+    .icon-btn:active{ background: rgba(0,0,0,.06); }
+
+    .icon{
+      width: 22px;
+      height: 22px;
+      display: block;
+      color: #111;
+    }
+
+    .logo-img{
+      height: 28px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      pointer-events: none;
+    }
+
+    /* ===== ETAPA 2: CORPO ACIMA DA DOBRA ===== */
+    .wrap{
+      padding-bottom: 96px; /* espaço para a barra fixa inferior */
+    }
+
+    /* bloco da imagem */
+    .hero{
+      position: relative;
+      background: #fff;
+      padding: 12px 12px 8px;
+    }
+
+    .hero__imgbox{
+      position: relative;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .hero__img{
+      width: 100%;
+      height: 360px;          /* altura semelhante ao print */
+      object-fit: contain;
+      display: block;
+      background: #fff;
+    }
+
+    /* badge “27% OFF” */
+    .badge-off{
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 1.05;
+      padding: 10px 10px;
+      border-radius: 6px;
+      text-align: center;
+      width: 58px;
+    }
+    .badge-off span{
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      margin-top: 2px;
+    }
+
+    /* botão expand (canto superior direito sobre imagem) */
+    .btn-expand{
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(0,0,0,.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .btn-expand:active{ transform: scale(.98); }
+
+    .expand-ico{
+      width: 18px;
+      height: 18px;
+      color: #222;
+    }
+
+    /* bolinhas do carrossel */
+    .dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #cfcfcf;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+    .dot.is-active{ background: var(--blue); }
+
+    /* título + share */
+    .info{
+      padding: 10px 12px 0;
+      border-top: 1px solid #f2f2f2;
+    }
+
+    .title-row{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .product-title{
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #111;
+  margin: 6px 0 4px;
+}
+
+
+    .share-btn{
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.10);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      cursor: pointer;
+      margin-top: 2px;
+    }
+    .share-btn:active{ background: rgba(0,0,0,.04); }
+
+    .share-ico{
+      width: 18px;
+      height: 18px;
+      color: #333;
+    }
+
+    .subtitle{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .rating{
+      margin: 10px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .star{
+      width: 16px;
+      height: 16px;
+      color: #f4b400; /* amarelo da estrela */
+      flex: 0 0 auto;
+    }
+    .rating strong{
+      font-weight: 700;
+    }
+    .reviews-link{
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* ===== BARRA FIXA INFERIOR (como no print) ===== */
+    .bottom-bar{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 10px 12px 14px;
+      z-index: 1000;
+    }
+
+    .bottom-actions{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .wish-btn{
+      width: 64px;
+      height: 52px;
+      border-radius: 999px;
+      background: #fff;
+      border: 2px solid var(--danger);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      flex: 0 0 auto;
+    }
+    .wish-btn:active{ transform: scale(.99); }
+
+    .plus{
+      font-size: 22px;
+      line-height: 1;
+      color: var(--danger);
+      font-weight: 700;
+      margin-top: -1px;
+    }
+
+    .heart{
+      width: 18px;
+      height: 18px;
+      color: var(--danger);
+    }
+
+    .add-btn{
+      height: 52px;
+      border-radius: 999px;
+      border: 0;
+      background: var(--green);
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex: 1;
+      cursor: pointer;
+    }
+    .add-btn:active{ transform: scale(.99); }
+
+    .cart-ico{
+      width: 18px;
+      height: 18px;
+      color: #fff;
+    }
+
+    /* ===== MODAL FULLSCREEN (só para simular o botão expand) ===== */
+   .modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.86);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+
+  /* 🔥 isto resolve de vez */
+  padding: 0;
+  overflow: hidden;
+}
+    .modal.is-open{ display: flex; }
+    .modal img{
+      width: 100%;
+      max-width: 520px;
+      max-height: 90vh;
+      object-fit: contain;
+      background: transparent;
+      display: block;
+    }
+    .modal-close{
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(0,0,0,.2);
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ===== BLOCO DE OFERTAS (Best Price / Fastest Delivery) ===== */
+.offers{
+  padding: 12px 12px 0;
+}
+
+.offer-card{
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+  padding: 14px 12px;
+  display: flex;
+  gap: 12px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.offer-card.is-selected{
+  border-color: #0b6ecb;
+  box-shadow: 0 0 0 1px #0b6ecb;
+}
+
+.offer-radio{
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 2px solid #c9c9c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  flex: 0 0 auto;
+  background: #fff;
+}
+
+.offer-card.is-selected .offer-radio{
+  border-color: #0b6ecb;
+}
+.offer-card.is-selected .offer-radio::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #0b6ecb;
+  display: block;
+}
+
+.offer-body{
+  flex: 1;
+  min-width: 0;
+}
+
+.offer-top{
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.price, .currency{
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  line-height: 1;
+}
+
+.currency{ margin-right: 6px; }
+
+.old-price{
+  color: #9a9a9a;
+  text-decoration: line-through;
+  font-size: 14px;
+  margin-top: 6px;
+  white-space: nowrap;
+}
+
+.info-ico{
+  width: 16px;
+  height: 16px;
+  color: #9a9a9a;
+  margin-top: 6px;
+  flex: 0 0 auto;
+}
+
+.offer-line{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+  color: #333;
+  font-size: 14px;
+}
+
+.offer-line .muted{
+  color: #8a8a8a;
+  font-weight: 500;
+}
+
+.delivery-range{
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.tcs{
+  display: inline-block;
+  margin-top: 6px;
+  color: #0b6ecb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tag{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.tag.best{ background: #0b6ecb; }
+.tag.fast{ background: #6d6d6d; }
+
+.tag-ico{
+  width: 16px;
+  height: 16px;
+  color: #fff;
+}
+
+.pill{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  border: 1px solid #e1e1e1;
+  color: #333;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 2px 6px;
+  line-height: 1.2;
+  margin-left: 6px;
+}
+
+/* ===== FREE DELIVERY WITH TAKEALOTMORE ===== */
+.takealotmore{
+  padding: 12px;
+}
+
+.takealotmore-box{
+  border: 1px dashed #dcdcdc;
+  border-radius: 12px;
+  background: #fff;
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.takealotmore-text{
+  font-size: 14px;
+  font-weight: 700;
+  color: #6a6a6a;
+  letter-spacing: .2px;
+}
+
+.takealotmore-text strong{
+  color: #0b6ecb; /* azul Takealot */
+  font-weight: 800;
+}
+
+.color-selector{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 por linha */
+  gap: 10px;
+  padding: 12px;
+}
+
+.color-option{
+  border:1px solid #ddd;
+  border-radius:6px;
+  padding:6px;
+  text-align:center;
+  cursor:pointer;
+  font-size:12px;
+  background:#fff;
+}
+
+.color-option img{
+  width:100%;
+  height:60px;
+  object-fit:contain;
+}
+
+.color-option.active{
+  border:2px solid #0b6ecb;
+}
+
+/* ===== SHIPS IN 4-6 WORK DAYS (Takealot-like) ===== */
+.ship-strip{
+  padding: 10px 12px 0;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.ship-head{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ship-title{
+  font-size: 20px;
+  font-weight: 900;
+  color: #111;
+  letter-spacing: -0.2px;
+}
+
+.ship-title strong{
+  font-weight: 900;
+}
+
+.ship-link{
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b6ecb;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ship-sub{
+  margin-top: 4px;
+}
+
+.ship-q{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0b6ecb;
+  text-decoration: none;
+}
+
+.ship-row{
+  display: grid;
+  grid-template-columns: 26px 1fr 22px;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid #e9e9e9;
+}
+
+.ship-row--last{
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.ship-ico{
+  width: 26px;
+  height: 26px;
+  color: #6f6f6f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ship-ico svg{
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.ship-text{
+  font-size: 14px;
+  color: #333;
+  line-height: 1.35;
+}
+
+.ship-info{
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: #178a3b; /* verde “info” */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 12px;
+}
+.ship-info span{
+  transform: translateY(-.5px);
+}
+
+/* ===== DESCRIPTION (Takealot-like) ===== */
+.desc-section{
+  padding: 6px 12px 0;
+  border-top: 1px solid #f0f0f0;
+}
+
+.desc-title{
+  margin: 16px 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+}
+
+.desc-box{
+  position: relative;
+}
+
+.desc-content{
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* estado recolhido */
+.desc-box {
+  position: relative;
+  transition: max-height 0.35s ease;
+}
+
+.desc-box.is-collapsed {
+  max-height: 260px;
+  overflow: hidden;
+}
+
+.desc-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), #fff);
+  pointer-events: none;
+}
+
+.desc-box:not(.is-collapsed) .desc-fade {
+  display: none;
+}
+
+.show-more {
+  margin-top: 12px;
+  background: none;
+  border: none;
+  color: #0b6ecb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* botão Show More */
+.show-more{
+  width: 100%;
+  margin: 12px 0 16px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  cursor: pointer;
+}
+.show-more:active{
+  transform: scale(.99);
+}
+
+/* ===== SELLER + CREDIT + REWARDS ===== */
+.seller-block{
+  padding: 12px;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.soldby{
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.soldby-label{ color:#333; }
+.soldby-link{
+  color: #0b6ecb;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+.seller-score{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  margin-bottom: 14px;
+}
+
+.seller-score-left{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.seller-score-title{
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.mini-info{
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #1a7f37;
+  color: #fff;
+  font-weight: 900;
+  font-size: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  line-height: 1;
+}
+
+.seller-score-right{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+}
+.mini-star{
+  color: #0b6ecb;
+  font-size: 16px;
+  transform: translateY(-1px);
+}
+.seller-rating{
+  font-weight: 800;
+}
+.dot-sep{
+  color: #9a9a9a;
+}
+.seller-reviews{
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* cards */
+.card{
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+  padding: 14px 12px;
+  margin-bottom: 12px;
+}
+
+/* takealot.credit */
+.credit-brand{
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  margin-bottom: 8px;
+}
+.credit-takealot{ color:#333; }
+.credit-dot{ color:#0b6ecb; }
+.credit-credit{ color:#333; font-weight: 900; }
+
+.credit-text{
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #333;
+}
+
+.credit-more{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.credit-more-inner{
+  background: #f4f4f4;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.credit-more-logo{
+  font-weight: 900;
+  margin-left: 6px;
+  color: #0b6ecb;
+}
+.credit-more-logo span{
+  color: #ff3b30; /* "more" em vermelho */
+  font-weight: 900;
+  margin-left: 2px;
+}
+
+.credit-options{
+  align-self: flex-end;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b6ecb;
+  text-decoration: none;
+}
+
+/* rewards */
+.reward-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.reward-left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.reward-badge{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 900;
+  color: #fff;
+  flex: 0 0 auto;
+}
+
+.reward-badge.eb{
+  background: #ff7a00; /* laranja */
+}
+
+.reward-name{
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+}
+.reward-name-accent{
+  color: #ff7a00;
+  font-weight: 900;
+}
+
+.reward-value{
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* discovery miles */
+.reward-d{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 2px solid #a98b4a;
+  color: #a98b4a;
+  font-weight: 900;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex: 0 0 auto;
+}
+
+.reward-name.miles{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+.miles-top{
+  font-size: 11px;
+  color: #4a6aa6;
+  font-weight: 700;
+}
+.miles-bottom{
+  font-size: 14px;
+  color: #1f3e7a;
+  font-weight: 900;
+  letter-spacing: .5px;
+}
+
+/* ===== PRODUCT INFORMATION ===== */
+.pi-section{
+  padding: 6px 12px 0;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.pi-title{
+  margin: 16px 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+}
+
+.pi-table{
+  border: 1px solid #e0e0e0;
+  border-radius: 0; /* no print parece bem “reta” */
+  overflow: hidden;
+  background: #fff;
+}
+
+.pi-row{
+  display: grid;
+  grid-template-columns: 42% 58%;
+  border-top: 1px solid #e0e0e0;
+  min-height: 44px;
+}
+
+.pi-row:first-child{ border-top: 0; }
+
+.pi-key{
+  background: #f3f3f3;
+  padding: 12px 12px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #333;
+}
+
+.pi-val{
+  padding: 12px 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.pi-links a{
+  color: #0b6ecb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pi-showmore{
+  width: 100%;
+  margin: 12px 0 16px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  cursor: pointer;
+}
+.pi-showmore:active{ transform: scale(.99); }
+
+/* ===== MODAL (sheet) ===== */
+.pi-modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: none;
+  z-index: 2200;
+}
+
+.pi-modal.is-open{ display: block; }
+
+.pi-sheet{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.pi-sheet-head{
+  height: 56px;
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 6px;
+}
+
+.pi-close{
+  width: 44px;
+  height: 44px;
+  margin-left: 6px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+.pi-close:active{ background: rgba(0,0,0,.06); }
+
+.pi-sheet-title{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  color: #111;
+}
+
+.pi-head-spacer{ width: 56px; height: 1px; }
+
+.pi-sheet-body{
+  height: calc(100% - 56px);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 0 18px;
+}
+
+.pi-table--full{
+  border-left: 0;
+  border-right: 0;
+}
+
+/* ===== REVIEWS PREVIEW ===== */
+.rv-preview{
+  padding: 12px;
+  border-top: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.rv-preview-head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.rv-preview-title{
+  font-size: 18px;
+  font-weight: 900;
+  color: #111;
+}
+
+.rv-preview-meta{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  color:#333;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.rv-star{ color:#f4b400; }
+.rv-score{ font-weight: 900; }
+.rv-count{ color:#6b6b6b; font-weight: 600; }
+
+.rv-card{
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  background: #f7f7f7;
+  padding: 12px;
+}
+
+.rv-card-top{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.rv-name-date{
+  font-size: 14px;
+  color:#333;
+  font-weight: 600;
+}
+
+.rv-mini-right{
+  display:flex;
+  align-items:center;
+  gap: 6px;
+  color:#333;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.rv-mini-star{ color:#f4b400; }
+.rv-mini-score{ font-weight: 900; }
+.rv-mini-like{ font-size: 12px; opacity: .8; }
+.rv-mini-likecount{ color:#666; font-weight: 700; }
+
+.rv-snippet{
+  font-size: 14px;
+  color:#444;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.rv-readmore{
+  color:#0b6ecb;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.rv-viewall-row{
+  display:flex;
+  justify-content:flex-end;
+  padding-top: 8px;
+}
+.rv-viewall{
+  color:#0b6ecb;
+  text-decoration:none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ===== REVIEWS PAGE (overlay) ===== */
+.rv-page{
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: none;
+  z-index: 2300;
+}
+
+.rv-page.is-open{ display:block; }
+
+.rv-topbar{
+  height: 56px;
+  display:grid;
+  grid-template-columns: 56px 1fr 56px;
+  align-items:center;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 6px;
+}
+
+.rv-back{
+  width: 44px;
+  height: 44px;
+  margin-left: 6px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+.rv-back:active{ background: rgba(0,0,0,.06); }
+
+.rv-top-title{
+  text-align:center;
+  font-size: 18px;
+  font-weight: 900;
+  color:#111;
+}
+.rv-top-spacer{ width:56px; height:1px; }
+
+.rv-summary{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 12px 6px;
+}
+
+.rv-big{
+  font-size: 64px;
+  font-weight: 900;
+  color:#4a4a4a;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.rv-stars{
+  font-size: 20px;
+  color:#f4b400;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+.rv-star-dim{ color:#d9d9d9; }
+
+.rv-total{
+  font-size: 16px;
+  font-weight: 700;
+  color:#555;
+  white-space: nowrap;
+}
+
+.rv-bars{
+  padding: 0 12px 10px;
+}
+
+.rv-bar-row{
+  display:grid;
+  grid-template-columns: 34px 1fr 52px;
+  align-items:center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.rv-bar-left{
+  font-size: 14px;
+  font-weight: 700;
+  color:#333;
+}
+.rv-bar-star{ color:#f4b400; }
+
+.rv-bar-track{
+  height: 10px;
+  background: #e9e9e9;
+  border-radius: 999px;
+  overflow:hidden;
+}
+
+.rv-bar-fill{
+  height: 100%;
+  border-radius: 999px;
+}
+
+/* cores das barras (igual ao visual do print) */
+.rv5{ width: 78%; background: #0a9a2a; }
+.rv4{ width: 15%; background: #7ac400; }
+.rv3{ width: 5%;  background: #f4b400; }
+.rv2{ width: 3%;  background: #f39c12; }
+.rv1{ width: 6%;  background: #e74c3c; }
+
+.rv-bar-num{
+  text-align:right;
+  font-size: 14px;
+  font-weight: 700;
+  color:#444;
+}
+
+.rv-write{
+  display:block;
+  text-align:right;
+  margin-top: 10px;
+  color:#0b6ecb;
+  text-decoration:none;
+  font-weight: 800;
+}
+
+.rv-controls{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 10px 12px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  background: #fff;
+}
+
+.rv-ctrl{
+  height: 44px;
+  border: 0;
+  background: #ececec;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 800;
+  color:#555;
+  cursor:pointer;
+}
+
+/* ===== REVIEWS PAGE (overlay) ===== */
+.rv-page{
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: none;
+  z-index: 2300;
+
+  /* ✅ importante */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.rv-page.is-open{ display:flex; }
+
+/* ✅ a lista ocupa o resto da tela e rola */
+.rv-list{
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 12px;
+}
+
+.rv-item{
+  padding: 14px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.rv-item-stars{
+  color:#f4b400;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.rv-item-head{
+  font-size: 16px;
+  color:#222;
+  margin-bottom: 4px;
+}
+
+.rv-item-sub{
+  font-size: 14px;
+  color:#888;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.rv-item-text{
+  font-size: 15px;
+  color:#333;
+  line-height: 1.45;
+}
+
+/* ===== SINGLE PRICE (1 preço, sem variação) ===== */
+.single-price{
+  padding: 12px 12px 0;
+  background: #fff;
+}
+
+.price-row{
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 12px;
+}
+
+.main-price{
+  display:flex;
+  align-items:baseline;
+  gap: 6px;
+}
+
+.main-price .currency{
+  font-size: 22px;
+  font-weight: 900;
+  color:#111;
+}
+
+.main-price .price{
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color:#111;
+  line-height: 1;
+}
+
+.was-price{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.was-price .was{
+  color:#9a9a9a;
+  text-decoration: line-through;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.est-delivery{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.muted{
+  color:#8a8a8a;
+  font-weight: 600;
+}
+
+/* pills CPT/JHB (reusa a tua pill se já existir) */
+.single-price .pill{
+  margin-left: 0;
+}
+
+#singleDeliveryRange{
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 900;
+  color:#111;
+}
+
+/* ===== FIX: remove buraco entre rating e preço ===== */
+.wrap{ padding-bottom: 0 !important; }
+
+.info{ 
+  padding-bottom: 6px !important; 
+  margin-bottom: 0 !important; 
+  min-height: auto !important; 
+}
+
+.subtitle{
+  margin: 4px 0 6px !important;
+}
+
+.rating{ 
+  margin: 0 !important; 
+  padding: 0 !important;
+}
+
+.wrap section{
+  margin-bottom: 0 !important;
+}
+.modal{
+  padding: 0 !important;
+}
+
+.modal-carousel{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#modalImg{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== FIX MODAL: remove barra branca/scroll ===== */
+.modal{
+  overflow: hidden !important;
+}
+
+.modal img{
+  display:block;
+}
+
+.add-btn,
+.add-btn:visited,
+.add-btn:hover,
+.add-btn:active {
+  text-decoration: none !important;
+}
+.pi-more {
+  display: none;
+}
+
+.pi-more.is-open {
+  display: block;
+}
+
+.pi-showmore {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- ETAPA 1: TOP BAR -->
+  <header class="topbar" aria-label="Top Bar">
+    <div class="topbar__left">
+      <button class="icon-btn" aria-label="Menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="topbar__center" aria-label="Takealot logo">
+      <img src="logo-takealot.svg" alt="takealot.com" class="logo-img" />
+    </div>
+
+    <div class="topbar__right">
+      <button class="icon-btn" aria-label="Search">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.2-3.2"></path>
+        </svg>
+      </button>
+
+      <button class="icon-btn" aria-label="Cart">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 6h15l-2 9H7L6 6Z"></path>
+          <path d="M6 6l-2-2H2"></path>
+          <circle cx="9" cy="20" r="1"></circle>
+          <circle cx="18" cy="20" r="1"></circle>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ETAPA 2: CORPO ACIMA DA DOBRA -->
+  <div class="wrap">
+    <section class="hero" aria-label="Product hero">
+      <div class="hero__imgbox">
+        <img id="productImage" class="hero__img" src="p1.png" alt="Product image">
+
+        <div class="badge-off" aria-label="Discount badge">
+          27%
+          <span>OFF</span>
+        </div>
+
+        <button class="btn-expand" id="expandBtn" aria-label="Expand image">
+          <svg class="expand-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 3H3v6"></path>
+            <path d="M15 21h6v-6"></path>
+            <path d="M21 9V3h-6"></path>
+            <path d="M3 15v6h6"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="dots" aria-label="Image carousel indicators">
+  <button class="dot is-active"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+</div>
+
+    <section class="info" aria-label="Product info">
+      <div class="title-row">
+      <h1 class="title">JBL Go 3 Waterproof Portable Bluetooth Speaker</h1>
+
+        <button class="share-btn" aria-label="Share">
+          <svg class="share-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="2"></circle>
+            <circle cx="6" cy="12" r="2"></circle>
+            <circle cx="18" cy="19" r="2"></circle>
+            <path d="M8 12l8-6"></path>
+            <path d="M8 12l8 6"></path>
+          </svg>
+        </button>
+      </div>
+
+      <p class="subtitle">JBL</p>
+
+      <div class="rating" aria-label="Rating and reviews">
+        <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 17.3l-6.18 3.73 1.64-7.03L2 9.24l7.19-.62L12 2l2.81 6.62 7.19.62-5.46 4.76 1.64 7.03z"></path>
+        </svg>
+        <strong>4.9</strong>
+        <a class="reviews-link" href="#" aria-label="Reviews link">3497 Reviews</a>
+      </div>
+  </div>
+
+ <!-- PRICE (apenas 1 preço) -->
+<section class="single-price" aria-label="Price and delivery">
+  <div class="price-row">
+    <div class="price-left">
+      <div class="main-price">
+        <span class="currency">R</span>
+        <span class="price">197</span>
+      </div>
+
+      <div class="was-price">
+        <span class="was">R 1,099</span>
+        <svg class="info-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M12 10v6"></path>
+          <path d="M12 7h.01"></path>
+        </svg>
+      </div>
+
+      <div class="est-delivery">
+        <span class="muted">Estimated Delivery</span>
+        <span class="pill">CPT</span>
+        <span class="pill">JHB</span>
+      </div>
+
+      <!-- aqui entra data dinâmica ou "Get It Tomorrow!" -->
+      <div class="delivery-inline">
+  <span class="delivery-range" id="singleDeliveryRange">--</span>
+  <a class="tcs" href="#">T&Cs Apply</a>
+</div>
+
+  </div>
+</section>
+
+
+  <!-- FREE DELIVERY WITH TAKEALOTMORE -->
+<section class="takealotmore">
+  <div class="takealotmore-box">
+    <span class="takealotmore-text">
+      FREE DELIVERY WITH <strong>TAKEALOTMORE</strong>
+    </span>
+      </div>
+  </div>
+
+ <section class="color-selector">
+
+  <div class="color-option active" data-color="black">
+    <img src="p1.png">
+    <span>Black</span>
+  </div>
+
+  <div class="color-option" data-color="blue">
+    <img src="p5.png">
+    <span>Blue</span>
+  </div>
+
+  <div class="color-option" data-color="bluepink">
+    <img src="p8.png">
+    <span>Blue / Pink</span>
+  </div>
+
+  <div class="color-option" data-color="camo">
+    <img src="p11.png">
+    <span>Camo</span>
+  </div>
+
+  <div class="color-option" data-color="green">
+    <img src="p14.png">
+    <span>Green</span>
+  </div>
+
+  <div class="color-option" data-color="pink">
+    <img src="p19.png">
+    <span>Pink</span>
+  </div>
+
+  <div class="color-option" data-color="red">
+    <img src="p23.png">
+    <span>Red</span>
+  </div>
+
+  <div class="color-option" data-color="white">
+    <img src="p28.png">
+    <span>White</span>
+  </div>
+
+</section>
+
+
+  <!-- SELLER + CREDIT + REWARDS (acima do shipping) -->
+<section class="seller-block" aria-label="Seller and credit information">
+  <div class="soldby">
+    <span class="soldby-label">Sold by</span>
+    <a class="soldby-link" href="#" aria-label="Seller">HiMost</a>
+  </div>
+
+  <div class="seller-score">
+    <div class="seller-score-left">
+      <span class="seller-score-title">Seller Score</span>
+      <span class="mini-info" aria-hidden="true">i</span>
+    </div>
+
+    <div class="seller-score-right">
+      <span class="mini-star" aria-hidden="true">★</span>
+      <span class="seller-rating">4.9</span>
+      <span class="dot-sep">•</span>
+      <a class="seller-reviews" href="#" aria-label="Seller reviews">1.9k Reviews</a>
+    </div>
+  </div>
+
+  <div class="card credit-card" aria-label="takealot credit">
+    <div class="credit-brand">
+      <span class="credit-takealot">takealot</span><span class="credit-dot">.</span><span class="credit-credit">credit</span>
+    </div>
+
+    <p class="credit-text">
+      Buy using <strong>takealot.credit</strong> for <strong>R 49</strong> p/m x <strong>12</strong><br>
+      months and get <strong>1%</strong> of your purchase back*.
+    </p>
+
+    <div class="credit-more">
+      <div class="credit-more-inner">
+        Get 3% with <span class="credit-more-logo">takealot<span>more</span></span>
+      </div>
+      <a class="credit-options" href="#" aria-label="More Credit Options">More Credit Options</a>
+    </div>
+  </div>
+
+  <div class="card reward-row" aria-label="eBucks">
+    <div class="reward-left">
+      <div class="reward-badge eb">eB</div>
+      <div class="reward-name">
+        <span class="reward-name-accent">e</span>Bucks
+      </div>
+    </div>
+    <div class="reward-value">eB5,190</div>
+  </div>
+
+  <div class="card reward-row" aria-label="Discovery Miles">
+    <div class="reward-left">
+      <div class="reward-d">D</div>
+      <div class="reward-name miles">
+        <span class="miles-top">Discovery</span>
+        <span class="miles-bottom">MILES</span>
+      </div>
+    </div>
+    <div class="reward-value">5,190</div>
+  </div>
+</section>
+
+  <!-- SHIPPING / POLICY STRIP -->
+<section class="ship-strip" aria-label="Shipping and policy information">
+  <div class="ship-head">
+    <div class="ship-title">
+      Ships in <strong>1 - 2</strong> work days
+    </div>
+    <a class="ship-link" href="#" aria-label="Learn More">Learn More</a>
+  </div>
+
+  <div class="ship-row">
+    <div class="ship-ico">
+      <!-- money icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+        <path d="M7 12h0"></path>
+        <path d="M17 12h0"></path>
+        <path d="M10 12h4"></path>
+      </svg>
+    </div>
+    <div class="ship-text">Eligible for Cash on Delivery.</div>
+    <div class="ship-info" aria-hidden="true">
+      <span>i</span>
+    </div>
+  </div>
+
+  <div class="ship-row">
+    <div class="ship-ico">
+      <!-- refresh/return icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 12a9 9 0 0 1 15-6"></path>
+        <path d="M18 6v6h-6"></path>
+        <path d="M21 12a9 9 0 0 1-15 6"></path>
+        <path d="M6 18v-6h6"></path>
+      </svg>
+    </div>
+    <div class="ship-text">Hassle-Free Exchanges &amp; Returns for 30 Days.</div>
+    <div class="ship-info" aria-hidden="true">
+      <span>i</span>
+    </div>
+  </div>
+
+  <div class="ship-row ship-row--last">
+    <div class="ship-ico">
+      <!-- calendar icon -->
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+        <path d="M16 2v4M8 2v4"></path>
+        <path d="M3 10h18"></path>
+      </svg>
+    </div>
+    <div class="ship-text">6-Month Full Warranty.</div>
+    <div class="ship-info" aria-hidden="true">
+      <span>i</span>
+    </div>
+  </div>
+
+<!-- ETAPA: DESCRIPTION (com Show More) -->
+<section class="desc-section" aria-label="Description">
+
+  <h2 class="desc-title">Description</h2>
+
+  <div class="desc-box is-collapsed" id="descBox">
+    <div class="desc-content">
+
+      <p>
+        <strong>JBL Go 3 – Bold Style. Rich Sound.</strong><br><br>
+
+        The JBL Go 3 delivers surprisingly powerful JBL Pro Sound in an ultra-compact and stylish design. With its bold look, vibrant colours and expressive details, it’s the perfect portable speaker for everyday life and outdoor adventures.<br><br>
+
+        <strong>Rich JBL Pro Sound:</strong><br>
+        Enjoy clear, punchy audio with impressive volume and clarity for such a small speaker. JBL Go 3 fills your space with rich sound wherever you go.<br><br>
+
+        <strong>IP67 Waterproof & Dustproof:</strong><br>
+        Designed to handle any environment, the JBL Go 3 is fully waterproof and dustproof. Take it to the beach, pool, shower or park without worrying about splashes, rain or dust.<br><br>
+
+        <strong>Ultra-Portable with Integrated Loop:</strong><br>
+        The built-in fabric loop makes it easy to carry or attach to your backpack, belt or bag, so your music is always with you.<br><br>
+
+        <strong>Modern, Eye-Catching Design:</strong><br>
+        Inspired by current street fashion, JBL Go 3 features bold styling, colourful fabrics and fresh colour combinations that look as good as they sound.<br><br>
+
+        <strong>Wireless Bluetooth Streaming:</strong><br>
+        Easily connect your smartphone, tablet or other Bluetooth-enabled devices and stream your favourite playlists wirelessly.<br><br>
+
+        Whether you’re relaxing at home, heading outdoors or meeting friends, the JBL Go 3 is the perfect compact speaker to match your lifestyle.
+      </p>
+
+      <p class="desc-subhead">
+        <strong>What's in the box</strong><br>
+        1 x JBL Go 3 Portable Bluetooth Speaker<br>
+        1 x Type-C USB Cable<br>
+        1 x Quick Start Guide<br>
+        1 x Warranty Card<br>
+        1 x Safety Sheet
+      </p>
+
+    </div>
+
+    <div class="desc-fade"></div>
+  </div>
+<button class="show-more" id="showMoreBtn" type="button">
+  Show more
+</button>
+
+
+</section>
+
+
+<!-- PRODUCT INFORMATION -->
+<section class="pi-section" aria-label="Product Information">
+  <h2 class="pi-title">Product Information</h2>
+
+  <div class="pi-sheet-body">
+
+    <!-- PREVIEW -->
+    <div class="pi-table pi-preview">
+      <div class="pi-row">
+        <div class="pi-key">Brand</div>
+        <div class="pi-val">JBL</div>
+      </div>
+
+      <div class="pi-row">
+        <div class="pi-key">Warranty</div>
+        <div class="pi-val">Limited (12 months)</div>
+      </div>
+
+      <div class="pi-row">
+        <div class="pi-key">Connectivity</div>
+        <div class="pi-val">Bluetooth</div>
+      </div>
+
+      <div class="pi-row">
+        <div class="pi-key">Is Rechargeable</div>
+        <div class="pi-val">Yes</div>
+      </div>
+    </div>
+
+    <!-- SHOW MORE (HIDDEN) -->
+    <div class="pi-table pi-more" id="piMore">
+      <div class="pi-row">
+        <div class="pi-key">Audio Jacks</div>
+        <div class="pi-val">No Jack</div>
+      </div>
+
+      <div class="pi-row">
+        <div class="pi-key">Speaker Mounting</div>
+        <div class="pi-val">Bookshelf</div>
+      </div>
+
+      <div class="pi-row">
+        <div class="pi-key">Assembled Dimensions</div>
+        <div class="pi-val">20 x 20 x 20 cm</div>
+      </div>
+
+      <div class="pi-row">
+        <div class="pi-key">Colour Name</div>
+        <div class="pi-val">Red</div>
+      </div>
+
+      <div class="pi-row">
+        <div class="pi-key">What's in the box</div>
+        <div class="pi-val">
+          1 x JBL Go 3<br>
+          1 x Type C USB cable<br>
+          1 x Quick start guide<br>
+          1 x Warranty card<br>
+          1 x Safety sheet
+        </div>
+      </div>
+
+      <div class="pi-row">
+        <div class="pi-key">Barcode</div>
+        <div class="pi-val">6925281975639</div>
+      </div>
+    </div>
+
+    <!-- BUTTON -->
+    <button class="pi-showmore" id="piToggle" type="button">
+      Show More
+    </button>
+
+  </div>
+</section>
+
+<!-- =========================
+     REVIEWS (Preview + Page)
+========================= -->
+
+<!-- REVIEWS (5 ESTRELAS APENAS) -->
+<section class="rv-preview" aria-label="Reviews">
+  <div class="rv-preview-head">
+    <div class="rv-preview-title">Reviews</div>
+
+    <div class="rv-preview-meta">
+      <span class="rv-star">★</span>
+      <span class="rv-score">5.0</span>
+      <span class="rv-count">1,249 reviews</span>
+    </div>
+  </div>
+
+  <div class="rv-list">
+
+    <div class="rv-item">
+      <div class="rv-item-stars">★★★★★</div>
+      <div class="rv-item-head">
+        <strong>Liandra</strong> – 01 Feb 2026
+      </div>
+      <div class="rv-item-sub">(Verified purchase)</div>
+      <div class="rv-item-text">
+        Incredibly impressed by the sound this small and sturdy speaker delivers. Crystal clear audio and impressive volume for its size. JBL is simply the best option on the market.
+      </div>
+    </div>
+
+    <div class="rv-item">
+      <div class="rv-item-stars">★★★★★</div>
+      <div class="rv-item-head">
+        <strong>Siya</strong> – 29 Jan 2026
+      </div>
+      <div class="rv-item-sub">(Reviewed 2 days after purchase)</div>
+      <div class="rv-item-text">
+        Compact, powerful and very well built. The IP67 water and dust resistance is a huge plus and the sound quality is perfectly balanced. Delivered earlier than expected. Great value for money.
+      </div>
+    </div>
+
+    <div class="rv-item">
+      <div class="rv-item-stars">★★★★★</div>
+      <div class="rv-item-head">
+        <strong>Craig</strong> – 27 Jan 2026
+      </div>
+      <div class="rv-item-sub">(Verified purchase)</div>
+      <div class="rv-item-text">
+        Fantastic product. This little speaker delivers real bass definition and sounds even better than some larger, more expensive JBL models.
+      </div>
+    </div>
+
+    <div class="rv-item">
+      <div class="rv-item-stars">★★★★★</div>
+      <div class="rv-item-head">
+        <strong>Michelle</strong> – 25 Jul 2025
+      </div>
+      <div class="rv-item-sub">(Reviewed after first use)</div>
+      <div class="rv-item-text">
+        I was genuinely surprised by the sound quality. Loud, clear and rich audio. Absolutely brilliant for such a compact speaker.
+      </div>
+    </div>
+
+    <div class="rv-item">
+      <div class="rv-item-stars">★★★★★</div>
+      <div class="rv-item-head">
+        <strong>Yoni</strong> – 14 Jul 2025
+      </div>
+      <div class="rv-item-sub">(Verified purchase)</div>
+      <div class="rv-item-text">
+        Great sound that easily fills a room despite its size. Battery life lasts longer than expected. Very impressed overall.
+      </div>
+    </div>
+
+    <div class="rv-item">
+      <div class="rv-item-stars">★★★★★</div>
+      <div class="rv-item-head">
+        <strong>Elana</strong> – 06 Jan 2026
+      </div>
+      <div class="rv-item-sub">(Verified purchase)</div>
+      <div class="rv-item-text">
+        Took a chance and was blown away. Very powerful and extremely clear sound. Worth every cent. One of my best purchases.
+      </div>
+    </div>
+
+    <div class="rv-item">
+      <div class="rv-item-stars">★★★★★</div>
+      <div class="rv-item-head">
+        <strong>Tove</strong> – 25 Aug 2025
+      </div>
+      <div class="rv-item-sub">(Reviewed after regular use)</div>
+      <div class="rv-item-text">
+        Durable, waterproof and perfect for daily use. I even take it into the shower. Sound quality is excellent for the size and I would definitely buy it again.
+      </div>
+    </div>
+
+    <div class="rv-item">
+      <div class="rv-item-stars">★★★★★</div>
+      <div class="rv-item-head">
+        <strong>Thoba</strong> – 06 Aug 2025
+      </div>
+      <div class="rv-item-sub">(Verified purchase)</div>
+      <div class="rv-item-text">
+        Small speaker, massive sound. Even at maximum volume it performs incredibly well. Truly proves that dynamite comes in small packages.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Barra fixa inferior -->
+  <footer class="bottom-bar" aria-label="Bottom action bar">
+    <div class="bottom-actions">
+      <button class="wish-btn" aria-label="Add to wishlist">
+        <span class="plus">+</span>
+        <svg class="heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.8 4.6c-1.5-1.5-3.9-1.5-5.4 0L12 8l-3.4-3.4c-1.5-1.5-3.9-1.5-5.4 0s-1.5 3.9 0 5.4L12 21l8.8-11c1.5-1.5 1.5-3.9 0-5.4z"></path>
+        </svg>
+      </button>
+
+     <a
+  href="http://checkout2.takealot-shop.online/"
+  class="add-btn"
+  aria-label="Add to Cart"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <svg class="cart-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M6 6h15l-2 9H7L6 6Z"></path>
+    <path d="M6 6l-2-2H2"></path>
+    <circle cx="9" cy="20" r="1"></circle>
+    <circle cx="18" cy="20" r="1"></circle>
+  </svg>
+  Add to Cart
+</a>
+
+  </footer>
+
+  <!-- Modal fullscreen -->
+<div class="modal" id="modal">
+  <button class="modal-close" id="modalClose">✕</button>
+
+  <div class="modal-carousel">
+    <img id="modalImg" src="p1.png">
+    <div class="modal-dots" id="modalDots"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const productImage = document.getElementById("productImage");
+  const dots = document.querySelectorAll(".dot");
+  const colorOptions = document.querySelectorAll(".color-option");
+
+  /* ===== IMAGENS POR COR ===== */
+  const colorImages = {
+    black: ["p1.png","p2.png","p3.png",],
+    blue: ["p5.png","p4.png","p6.png","p7.png"],
+    bluepink: ["p8.png","p9.png","p10.png",],
+    camo: ["p11.png","p12.png","p13.png",],
+    green: ["p14.png","p15.png","p16.png","p17.png", "p18.png"],
+    pink: ["p19.png","p20.png","p22.png",],
+    red: ["p23.png","p24.png","p25.png","p26.png",],
+    white: ["p28.png", "p29.png","p30.png"]
+  };
+
+  let currentColor = "black";
+  let currentIndex = 0;
+
+  /* ===== FUNÇÃO CENTRAL ===== */
+  function render(){
+    const imgs = colorImages[currentColor];
+    productImage.src = imgs[currentIndex];
+
+    // dots
+    dots.forEach(d => d.classList.remove("is-active"));
+    dots[currentIndex % dots.length]?.classList.add("is-active");
+
+    // cores
+    colorOptions.forEach(o => o.classList.remove("active"));
+    document
+      .querySelector(`.color-option[data-color="${currentColor}"]`)
+      ?.classList.add("active");
+  }
+
+  /* ===== CLIQUE NA COR ===== */
+  colorOptions.forEach(option => {
+    option.addEventListener("click", () => {
+      currentColor = option.dataset.color;
+      currentIndex = 0; // sempre começa na 1ª imagem da cor
+      render();
+    });
+  });
+
+  /* ===== CLIQUE NOS DOTS ===== */
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      currentIndex = i % colorImages[currentColor].length;
+      render();
+    });
+  });
+
+  /* ===== SWIPE ===== */
+  let startX = 0;
+  const threshold = 40;
+
+  function swipe(dir){
+    const max = colorImages[currentColor].length;
+    currentIndex = (currentIndex + dir + max) % max;
+    render();
+  }
+
+  productImage.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  productImage.addEventListener("touchend", e => {
+    const endX = e.changedTouches[0].clientX;
+    if(startX - endX > threshold) swipe(1);
+    if(endX - startX > threshold) swipe(-1);
+  });
+
+  productImage.addEventListener("mousedown", e => startX = e.clientX);
+  productImage.addEventListener("mouseup", e => {
+    const endX = e.clientX;
+    if(startX - endX > threshold) swipe(1);
+    if(endX - startX > threshold) swipe(-1);
+  });
+
+  /* ===== INIT ===== */
+  render();
+
+});
+
+
+  /* ===== SWIPE ===== */
+  let startX = 0;
+
+  productImage.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  productImage.addEventListener("touchend", e => {
+    const endX = e.changedTouches[0].clientX;
+    handleSwipe(endX);
+  });
+
+  productImage.addEventListener("mousedown", e => startX = e.clientX);
+  productImage.addEventListener("mouseup", e => handleSwipe(e.clientX));
+
+  function handleSwipe(endX){
+    if(startX - endX > threshold){
+      currentIndex = (currentIndex + 1) % colorImages[currentColor].length;
+      showImage();
+    }
+    if(endX - startX > threshold){
+      currentIndex = (currentIndex - 1 + colorImages[currentColor].length) % colorImages[currentColor].length;
+      showImage();
+    }
+  }
+
+  /* ===== INIT ===== */
+  showImage();
+
+
+
+    // === Seleção de ofertas (radio visual) ===
+const offerCards = Array.from(document.querySelectorAll(".offer-card"));
+function selectOffer(idx){
+  offerCards.forEach((c, i) => c.classList.toggle("is-selected", i === idx));
+}
+offerCards.forEach((card, idx) => {
+  card.addEventListener("click", () => selectOffer(idx));
+  card.addEventListener("keydown", (e) => {
+    if(e.key === "Enter" || e.key === " "){
+      e.preventDefault();
+      selectOffer(idx);
+    }
+  });
+});
+
+
+// === Product Information modal ===
+const piOpen = document.getElementById("piOpen");
+const piModal = document.getElementById("piModal");
+const piClose = document.getElementById("piClose");
+
+if(piOpen && piModal && piClose){
+  piOpen.addEventListener("click", () => {
+    piModal.classList.add("is-open");
+    piModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  });
+
+  function closePi(){
+    piModal.classList.remove("is-open");
+    piModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  piClose.addEventListener("click", closePi);
+
+  // clicar fora (overlay) fecha
+  piModal.addEventListener("click", (e) => {
+    if(e.target === piModal) closePi();
+  });
+
+  // ESC fecha
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && piModal.classList.contains("is-open")) closePi();
+  });
+}
+
+// === Reviews overlay open/close ===
+const rvPage = document.getElementById("rvPage");
+const rvClose = document.getElementById("rvClose");
+const rvOpenFromViewAll = document.getElementById("rvOpenFromViewAll");
+const rvOpenFromReadMore = document.getElementById("rvOpenFromReadMore");
+
+function openReviews(){
+  rvPage.classList.add("is-open");
+  rvPage.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+function closeReviews(){
+  rvPage.classList.remove("is-open");
+  rvPage.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+if(rvOpenFromViewAll) rvOpenFromViewAll.addEventListener("click", (e)=>{ e.preventDefault(); openReviews(); });
+if(rvOpenFromReadMore) rvOpenFromReadMore.addEventListener("click", (e)=>{ e.preventDefault(); openReviews(); });
+if(rvClose) rvClose.addEventListener("click", closeReviews);
+
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape" && rvPage && rvPage.classList.contains("is-open")) closeReviews();
+});
+
+
+// default selecionado (igual ao print)
+selectOffer(0);
+
+    // Inicial
+    setActive(0);
+
+// ===== Swipe / Drag para trocar imagens =====
+let currentIndex = 0;
+const threshold = 40; // distância mínima em px para trocar
+
+function showImage(index){
+  if(index < 0) index = images.length - 1;
+  if(index >= images.length) index = 0;
+  currentIndex = index;
+  setActive(currentIndex);
+}
+
+// Touch (mobile)
+productImage.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+productImage.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = endX - startX;
+
+  if(Math.abs(diff) > threshold){
+    if(diff < 0){
+      showImage(currentIndex + 1); // swipe left
+    } else {
+      showImage(currentIndex - 1); // swipe right
+    }
+  }
+});
+
+// Mouse (desktop)
+let isDragging = false;
+
+productImage.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  startX = e.clientX;
+});
+
+productImage.addEventListener("mouseup", (e) => {
+  if(!isDragging) return;
+  isDragging = false;
+  const endX = e.clientX;
+  const diff = endX - startX;
+
+  if(Math.abs(diff) > threshold){
+    if(diff < 0){
+      showImage(currentIndex + 1);
+    } else {
+      showImage(currentIndex - 1);
+    }
+  }
+});
+
+    // ===== Delivery dates (dinâmicas + Get It Tomorrow) =====
+(function setDynamicDeliveryDates(){
+  const bestEl = document.getElementById("bestDeliveryRange");
+  const fastEl = document.getElementById("fastDeliveryRange");
+  if(!bestEl || !fastEl) return;
+
+  function addDays(date, days){
+    const d = new Date(date);
+    d.setDate(d.getDate() + days);
+    return d;
+  }
+
+  function formatDayMonth(date){
+    const months = [
+      "January","February","March","April","May","June",
+      "July","August","September","October","November","December"
+    ];
+    return `${date.getDate()} ${months[date.getMonth()]}`;
+  }
+
+  function formatRange(start, end){
+    return `${formatDayMonth(start)} - ${formatDayMonth(end)}`;
+  }
+
+  const today = new Date();
+  const tomorrow = addDays(today, 1);
+
+  // ===== CONFIGURAÇÃO (podes ajustar se o professor pedir) =====
+  // Best Price → mais lento
+  const bestStart = addDays(today, 7);
+  const bestEnd   = addDays(today, 14);
+
+  // Fastest Delivery → rápido
+  const fastStart = addDays(today, 1);
+  const fastEnd   = addDays(today, 2);
+
+  // Best Price sempre com intervalo
+  bestEl.textContent = formatRange(bestStart, bestEnd);
+
+  // Fastest Delivery: "Get It Tomorrow!" se aplicável
+  const isTomorrow =
+    fastStart.getDate() === tomorrow.getDate() &&
+    fastStart.getMonth() === tomorrow.getMonth() &&
+    fastStart.getFullYear() === tomorrow.getFullYear();
+
+  if(isTomorrow){
+    fastEl.textContent = "Get It Tomorrow!";
+  } else {
+    fastEl.textContent = formatRange(fastStart, fastEnd);
+  }
+})();
+
+// ===== Delivery date (preço único) + Get It Tomorrow =====
+(function singleDelivery(){
+  const el = document.getElementById("singleDeliveryRange");
+  if(!el) return;
+
+  function addDays(date, days){
+    const d = new Date(date);
+    d.setDate(d.getDate() + days);
+    return d;
+  }
+  function formatDayMonth(date){
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    return `${date.getDate()} ${months[date.getMonth()]}`;
+  }
+  function formatRange(a,b){
+    return `${formatDayMonth(a)} - ${formatDayMonth(b)}`;
+  }
+
+  const today = new Date();
+  const start = addDays(today, 1);  // amanhã
+  const end   = addDays(today, 2);  // depois de amanhã
+
+  // Se começa amanhã, mostra Get It Tomorrow!
+  const tomorrow = addDays(today, 1);
+  const isTomorrow =
+    start.getFullYear() === tomorrow.getFullYear() &&
+    start.getMonth() === tomorrow.getMonth() &&
+    start.getDate() === tomorrow.getDate();
+
+  el.textContent = isTomorrow ? "Get It Tomorrow!" : formatRange(start, end);
+})();
+
+// ===== MODAL CAROUSEL DINÂMICO =====
+const modalDotsContainer = document.getElementById("modalDots");
+
+function buildModalDots(){
+  modalDotsContainer.innerHTML = "";
+  images.forEach((_, i) => {
+    const b = document.createElement("button");
+    b.className = "modal-dot";
+    if(i === currentIndex) b.classList.add("is-active");
+    b.dataset.index = i;
+    b.addEventListener("click", () => {
+      currentIndex = i;
+      showImage(i);
+      setModalActive(i);
+    });
+    modalDotsContainer.appendChild(b);
+  });
+}
+
+function setModalActive(index){
+  modalImg.src = images[index];
+  document.querySelectorAll(".modal-dot")
+    .forEach((d,i) => d.classList.toggle("is-active", i === index));
+}
+
+// abre modal
+expandBtn.addEventListener("click", () => {
+  modal.classList.add("is-open");
+  modalImg.src = images[currentIndex];
+  buildModalDots();
+});
+
+// swipe no modal
+let modalStartX = 0;
+
+modalImg.addEventListener("touchstart", e => {
+  modalStartX = e.touches[0].clientX;
+});
+
+modalImg.addEventListener("touchend", e => {
+  const diff = e.changedTouches[0].clientX - modalStartX;
+  if(Math.abs(diff) > 40){
+    if(diff < 0) currentIndex++;
+    else currentIndex--;
+    showImage(currentIndex);
+    setModalActive(currentIndex);
+  }
+});
+
+// ===== TROCA DE COR / IMAGEM PRINCIPAL =====
+const mainImage = document.getElementById("productImage");
+
+colorOptions.forEach(option => {
+  option.addEventListener("click", () => {
+    const newImg = option.getAttribute("data-img");
+
+    // troca imagem principal
+    mainImage.src = newImg;
+
+    // remove active de todos
+    colorOptions.forEach(o => o.classList.remove("active"));
+
+    // adiciona active ao clicado
+    option.classList.add("active");
+  });
+});
+
+  const productImage = document.getElementById("productImage");
+  const colorOptions = document.querySelectorAll(".color-option");
+
+  colorOptions.forEach(option => {
+    option.addEventListener("click", () => {
+
+      // remove active de todos
+      colorOptions.forEach(o => o.classList.remove("active"));
+
+      // ativa o clicado
+      option.classList.add("active");
+
+      // troca a imagem principal
+      const newImg = option.getAttribute("data-img");
+      if(newImg){
+        productImage.src = newImg;
+      }
+    });
+  });
+
+  </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const descBox = document.getElementById("descBox");
+  const showMoreBtn = document.getElementById("showMoreBtn");
+
+  if (!descBox || !showMoreBtn) return;
+
+  // começa recolhido
+  descBox.classList.add("is-collapsed");
+  showMoreBtn.textContent = "Show more";
+
+  showMoreBtn.addEventListener("click", () => {
+    const isCollapsed = descBox.classList.toggle("is-collapsed");
+    showMoreBtn.textContent = isCollapsed ? "Show more" : "Show less";
+  });
+
+});
+</script>
+
+
+  <!-- SHOW MORE PRODUCT INFO -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("piToggle");
+  const more = document.getElementById("piMore");
+
+  if (!btn || !more) {
+    console.error("Show More: elementos não encontrados");
+    return;
+  }
+
+  btn.addEventListener("click", function () {
+    more.classList.toggle("is-open");
+
+    btn.textContent = more.classList.contains("is-open")
+      ? "Show Less"
+      : "Show More";
+  });
+});
+</script>
+</body>
+
+</body>
+</html>
